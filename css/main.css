@@ -57,17 +57,7 @@ header{
     margin-top: 0.5em;
 }
 
-#reporting{
-    background: black url("../img/icons/action-report-new.png") left 50% top 77px no-repeat;
-}
-
-#dashboard{
-    background: black url("../img/icons/action-report-top.png") left 50% top 77px no-repeat;
-}
-
-#help{
-    background: black url("../img/icons/actions-help.png") left 50% top 77px no-repeat;
-}
+/*sharon change removed tags*/
 
 .menu-caption{
     background: rgb(235, 235, 235);
@@ -84,7 +74,7 @@ header{
     float: left;
 }
 
-/* sharon ,changed to border arrow, remove image from folder */
+/* sharon ,changed to border arrow, remove image from folder, and removed nav section css to js */
 .menu-caption:after {
 
 content: "";
@@ -100,29 +90,19 @@ content: "";
       
 }
 
-.notifications{
-
-}
-
 .notifications  p {
     background: rgb(235, 235, 235);
     padding: 0.6em 1.8em 0.6em 1.8em;
     font-size: 14px;
     margin: 1em;
 }
+
+
+.nav-section:hover{
+    background-color: #333333 !important;
+}
 /* end of change*/
 
-#reporting:hover{
-    background: #333333 url("../img/icons/action-report-new.png") left 50% top 77px no-repeat;
-}
-
-#dashboard:hover{
-    background: #333333 url("../img/icons/action-report-top.png") left 50% top 77px no-repeat;
-}
-
-#help:hover{
-    background: #333333 url("../img/icons/actions-help.png") left 50% top 77px no-repeat;
-}
 
 .nav-section:hover .menu-caption:after{
     transform: rotate(180deg);

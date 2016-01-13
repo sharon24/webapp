@@ -49,6 +49,9 @@ var UTILS = (function () {
 						var res = xhr.responseText,
 							contentType = xhr.getResponseHeader('Content-Type');
 
+							
+    alert(xhr.getAllResponseHeaders()); 
+
 
 						// If server sent a content type header, handle formats
 						if (contentType) {
