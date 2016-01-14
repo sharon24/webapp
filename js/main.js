@@ -29,7 +29,8 @@ var updateQuickActions= function (quickActions) {
 		for (var i = 0; i < quickActions.length; i++) {
 			navSections[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + navSections[i].innerHTML;
 			navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 77px no-repeat";
-		
+		 navSections[i].addEventListener("focus",changeFocusNav,false);
+
 		}
 
 		var menuCaptions = all(".menu-caption");
@@ -46,16 +47,19 @@ var updateQuickActions= function (quickActions) {
 				actionLists[i].innerHTML += "<li><a tabindex=\""+g+"\" href=\"" + quickActions[i].actions[j].url + "\">" + quickActions[i].actions[j].label + "</a></li>"
 				g++;
 
-				 all(".action-list li >a")[q].addEventListener("focus",changeFocus,false);
+
+ 			if (j+1 == quickActions[i].actions.length) {
+				 all(".action-list li >a")[q].addEventListener("blur",changeFocus,false);
+				}
 				 q++;
-				 console.log(q);
-				//actionLists[i].addEventListener("focus",changeFocus,false);
+				 
+				
 			}
 			g++;
 		}
 
 	}
-	alert(all(".action-list li >a").length)
+
 
 
 }
@@ -67,20 +71,44 @@ var updateTabs = function(iconList){
         tabs[i].innerHTML="<i class=\""+cls+iconList.icons[i].icon.tags[0]+"\"></i>" + tabs[i].innerHTML;
     }
     $(".tabs>ul>li").className+="active-tab";
+    //all(".tabs >div").style.display="none";
+    $(".tabs>div").style.display="block";
     window.addEventListener("hashchange",changeActiveTab,false);
 
 
 }
 var changeFocus = function(e){
-	alert("hi");
+	//alert(this.parentNode.parentNode.parentNode);
+
+	this.parentNode.parentNode.style.display ="none";
 }
 
+var changeFocusNav = function(e){
+
+			this.querySelector(".action-list").style.display = "block";
+
+
+}
+
+
+
 var changeActiveTab = function(e){
-    var oldHash = e.newURL.substring(e.oldURL.indexOf("#"));
+    var oldHash = e.oldURL.substring(e.oldURL.indexOf("#"));
     var newHash = e.newURL.substring(e.newURL.indexOf("#"));
+
+
+var tabDivs=all(".tabs > div");
+ for (var i = 0; i <tabDivs.length; i++) {
+tabDivs[i].style.display ="none";  //done in case of reload when you cannot tell which was the last active tab
+}
+
+  $(newHash).style.display ="block";
+
 
    $(".active-tab").className="";
     $("a[href=\"" + newHash +"\"]").parentNode.className="active-tab";
+
+
 }
 
 function initialize () {	
