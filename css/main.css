@@ -39,7 +39,9 @@ header{
 }
 
 
+/*sharon change removed tags*/
 
+/*endof changes*/
 .nav-section{
     background: black;
     height: 11em;
@@ -57,7 +59,7 @@ header{
     margin-top: 0.5em;
 }
 
-/*sharon change removed tags*/
+
 
 .menu-caption{
     background: rgb(235, 235, 235);
@@ -98,19 +100,25 @@ content: "";
 }
 
 
-.nav-section:hover{
+.nav-section:hover,.nav-section:focus{
     background-color: #333333 !important;
 }
+
+
+
 /* end of change*/
 
 
-.nav-section:hover .menu-caption:after{
+.nav-section:hover .menu-caption:after,.nav-section:focus .menu-caption:after{
     transform: rotate(180deg);
 }
 
-.nav-section:hover .action-list{
+.nav-section:hover .action-list,.nav-section:focus .action-list{
     display: block;
 }
+
+
+
 
 
 
@@ -165,14 +173,24 @@ content: "";
     color:white;
 }
 
-.tabs >ul >li:focus{
-
-    background: rgb(235, 235, 235);
+.tabs >ul >li >a >i {
+    padding-right: 5px
 }
 
-.tabs li:first-child {
-    color: black;
+.tabs >ul >li:focus{
     background: rgb(235, 235, 235);
+    outline: none;
+}
+
+.active-tab {
+    background: rgb(235, 235, 235)!important;
+}
+
+.active-tab >a{
+    color: black!important;
+}
+
+.tabs li:first-child{
     margin-left: 0;
 }
 

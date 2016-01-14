@@ -49,16 +49,14 @@ var UTILS = (function () {
 						var res = xhr.responseText,
 							contentType = xhr.getResponseHeader('Content-Type');
 
-							
-    alert(xhr.getAllResponseHeaders()); 
-
 
 						// If server sent a content type header, handle formats
 						if (contentType) {
 
 							// Handle JSON format
 							if (contentType === 'text/json' ||
-								contentType === 'application/json' || contentType === 'application/xml') {
+								contentType === 'application/json' ||
+								contentType === 'application/xml') {
 
 
 								// JSON throws an exception on invalid JSON
@@ -72,7 +70,6 @@ var UTILS = (function () {
 									}
 								}
 
-								//alert(res.notification);
 							// Handle XML format
 							} else if (contentType === 'text/xml' ||
 								contentType === 'application/xml') {
