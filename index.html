@@ -1,87 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>WebApp</title>
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="fonts/style.css">
+    <title>WebApp</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="fonts/style.css">
 </head>
 <body>
-	<header>
-		<div class="layout-wrap">
-			<a  tabindex="1" class="logo" href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
+<header>
+    <div class="layout-wrap">
+        <a tabindex="1" class="logo" href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
 
-			<form class="search-box">
-				<input  tabindex="2" type="search" name="q" placeholder="search">
-			</form>
-		</div>
-	</header>
+        <form class="search-box">
+            <input tabindex="2" type="search" name="q" placeholder="search">
+        </form>
+    </div>
+</header>
 
-	<section class="page-body layout-wrap">
-		<div class="notifications">
-		</div>
+<section class="page-body layout-wrap">
+    <div class="notifications">
+    </div>
 
-		<nav>
-			<div tabindex="3" class="nav-section">
-				<div  class="menu">
-					<div class="menu-caption">
-					</div>
+    <div class="nav-wrapper"><nav>
+        <div tabindex="3" class="nav-section">
+            <div class="menu">
+                <div class="menu-caption">
+                </div>
 
-					<ul class="action-list">
-					</ul>
-				</div>
-			</div>
+                <ul class="action-list">
+                </ul>
+            </div>
+        </div>
 
-			<div tabindex="7" class="nav-section">
-				<div class="menu">
-					<div class="menu-caption">
-					</div>
+        <div tabindex="7" class="nav-section">
+            <div class="menu">
+                <div class="menu-caption">
+                </div>
 
-					<ul class="action-list">
-					</ul>
-				</div>
-			</div>
+                <ul class="action-list">
+                </ul>
+            </div>
+        </div>
 
-			<div tabindex="12" class="nav-section">
-				<div class="menu">
-					<div class="menu-caption">
-					</div>
+        <div tabindex="12" class="nav-section">
+            <div class="menu">
+                <div class="menu-caption">
+                </div>
 
-					<ul class="action-list">
-					</ul>
-				</div>
-			</div>
-		</nav>
+                <ul class="action-list">
+                </ul>
+            </div>
+        </div>
+    </nav></div>
 
-		<section class="tabs">
-			<ul>
-				<li><a href="#quick-reports">Quick Reports</a></li>
-				<li><a href="#my-folders">My Folders</a></li>
-				<li><a href="#my-team-folders">My Team Folders</a></li>
-				<li><a href="#public-folders">Public Folders</a></li>
-			</ul>
+    <section class="tabs">
+        <ul>
+            <li><a tabindex="16" href="#quick-reports">Quick Reports</a></li>
+            <li><a tabindex="17" href="#my-folders">My Folders</a></li>
+            <li><a tabindex="18" href="#my-team-folders">My Team Folders</a></li>
+            <li><a tabindex="19" href="#public-folders">Public Folders</a></li>
+        </ul>
 
-			<div id="quick-reports">
 
-			</div>
+        <div id="quick-reports">
+            <div>
+                <a href="http://www.paulirish.com/" class="expand-icon" target="_blank">
+                    <img src="img/icons/expand.png" alt="open in new window">
+                </a>
+                <a href="" class="settings-icon" target="_blank">
+                    <img src="img/icons/settings.png" alt="open in new window">
+                </a>
+            </div>
 
-			<div id="my-folders">
-				<iframe src="http://www.paulirish.com/" class="frame-window"></iframe>
-			</div>
+            <div class="">
 
-			<div id="my-team-folders">
-			</div>
+            </div>
+        </div>
 
-			<div id="public-folders">
-				<iframe src="http://addyosmani.com/" class="frame-window"></iframe>
-			</div>
-		</section>
-	</section>
-	<script src="js/plugins.js"></script>	
-	<script src="js/main.js"></script>
+        <div id="my-folders">
+            <div>
+                <a href="http://www.paulirish.com/" class="expand-icon" target="_blank">
+                    <img src="img/icons/expand.png" alt="open in new window">
+                </a>
+            </div>
+            <iframe src="http://www.paulirish.com/" class="frame-window"></iframe>
+        </div>
+
+        <div id="my-team-folders">
+        </div>
+
+        <div id="public-folders">
+            <div>
+                <a href="http://addyosmani.com/" class="expand-icon" target="_blank">
+                    <img src="img/icons/expand.png" alt="open in new window">
+                </a>
+            </div>
+            <iframe src="http://addyosmani.com/" class="frame-window"></iframe>
+        </div>
+    </section>
+</section>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
