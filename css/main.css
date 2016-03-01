@@ -1,12 +1,11 @@
 body{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     background: url(../img/body-background.jpg) 100% fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
 }
 
-/*Header*/
 header{
     height: 72px;
     width: 100%;
@@ -68,15 +67,15 @@ header{
     width: 100%;
 }
 
-.menu-caption > p{
+.menu-caption > p ,.dynamic-drop-down>ul{
     padding-left: 1em;
     float: left;
 }
 
-.menu-caption:after {
+.menu-caption:after{
     content: "";
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid black;
@@ -121,7 +120,7 @@ header{
     text-align: left;
     position: absolute;
     top: 160px;
-
+    z-index: 1;
 }
 
 .action-list >li{
@@ -202,16 +201,22 @@ header{
 }
 
 .frame-window {
-    width:100%;
-    height:89%;
-    margin-top:1em;
+    width: 100%;
+    height: 84%;
     border: medium none;
+    position: absolute;
+    margin: 0em;
+    box-sizing: border-box;
+    display: block;
+    padding-right: 2em;
+    top: 68px;
+    z-index: 0;
 }
 
 .expand-icon ,.settings-icon{
     float: right;
     text-align: center;
-    margin: 2em 1em 0 1em;
+    margin: 1em 1em 0 1em;
     display: block;
     width: 20px;
     height: 20px;
@@ -226,3 +231,149 @@ header{
     margin-left: auto;
 }
 
+.icons-bar{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    top: 4px;
+}
+
+.settings{
+    background: white;
+    padding: 1em;
+    box-shadow: 1px 1px 6px 2px gray;
+    height: 36%;
+    position: relative;
+    z-index: 2;
+}
+
+.settings  > form > ul{
+    padding-left: 0;
+}
+
+.settings  > form > ul > li{
+    display: inline-block;
+    width: 100%;
+    list-style-type: none;
+    background: rgb(235, 235, 235);
+    padding: 10px 0 10px 0;
+    margin: 2px 0 7px 0;
+    font-size: 12px;
+}
+
+.settings  > form > ul > li > label{
+    box-sizing: border-box;
+    width: 20%;
+    margin: 0 7% 0 2%;
+}
+
+.settings  form ul div{
+    box-sizing: border-box;
+    width: 40%;
+    display: inline-block;
+}
+
+.settings  > form > ul input {
+    border: none;
+    width: 80%;
+    height: 1.5em;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.save, .cancel{
+    position: relative;
+    float: left;
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    width: 6em;
+    margin-left: 1em;
+    cursor: pointer;
+    
+}
+
+.save{
+    color: white;
+    background: black;
+}
+
+.form-buttons {
+    float: right;
+}
+
+.cancel{
+    color: black;
+    background: white;
+    text-decoration: underline;
+}
+
+.quick-reports ,.my-team-folders{
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.settings-icon-wrapper{
+    background: white;
+    height: 3em;
+    width: 3em;
+    float: right;
+}
+
+
+
+.styled-select-list li a:link ,.styled-select-list li a:visited {
+    text-decoration: none;
+    color: #6E6E6E;
+}
+
+.styled-select-list {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 5px 0 5px 9px;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    width: 300px;
+    background: white none repeat scroll 0 0;
+    display: none;
+    cursor: default;
+}
+
+.styled-select-list li:first-child {
+ display: block;   
+}
+
+.styled-select-list li {
+ display: none;   
+}
+
+.styled-select-list li:first-child:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+
+}
+
+.styled-select-list:hover  li{
+    display: block;
+}
+
+#my-folders .frame-window, #public-folders .frame-window{
+    margin: 1em;
+}
+
+#my-team-folders .expand-icon, #quick-reports  .expand-icon{
+    display: none;
+}
+input:invalid {
+    border: 1px solid red !important;
+}

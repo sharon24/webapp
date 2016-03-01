@@ -13,10 +13,9 @@
 <body>
 <header>
     <div class="layout-wrap">
-        <a tabindex="1" class="logo" href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
-
-        <form class="search-box">
-            <input tabindex="2" type="search" name="q" placeholder="search">
+        <a tabindex="1" class="logo" href="#"><img src="img/logo-netcraft.svg" alt="netcraft logo"></a>
+        <form class="search-box" onsubmit="event.preventDefault()">
+            <input tabindex="2" class="input-search" type="text" placeholder="search">
         </form>
     </div>
 </header>
@@ -25,37 +24,39 @@
     <div class="notifications">
     </div>
 
-    <div class="nav-wrapper"><nav>
-        <div tabindex="3" class="nav-section">
-            <div class="menu">
-                <div class="menu-caption">
+    <div class="nav-wrapper">
+        <nav>
+            <div tabindex="3" class="nav-section">
+                <div class="menu">
+                    <div class="menu-caption">
+                    </div>
+
+                    <ul class="action-list">
+                    </ul>
                 </div>
-
-                <ul class="action-list">
-                </ul>
             </div>
-        </div>
 
-        <div tabindex="7" class="nav-section">
-            <div class="menu">
-                <div class="menu-caption">
+            <div tabindex="7" class="nav-section">
+                <div class="menu">
+                    <div class="menu-caption">
+                    </div>
+
+                    <ul class="action-list">
+                    </ul>
                 </div>
-
-                <ul class="action-list">
-                </ul>
             </div>
-        </div>
 
-        <div tabindex="12" class="nav-section">
-            <div class="menu">
-                <div class="menu-caption">
+            <div tabindex="12" class="nav-section">
+                <div class="menu">
+                    <div class="menu-caption">
+                    </div>
+
+                    <ul class="action-list">
+                    </ul>
                 </div>
-
-                <ul class="action-list">
-                </ul>
             </div>
-        </div>
-    </nav></div>
+        </nav>
+    </div>
 
     <section class="tabs">
         <ul>
@@ -66,19 +67,64 @@
         </ul>
 
 
-        <div id="quick-reports">
-            <div>
-                <a href="http://www.paulirish.com/" class="expand-icon" target="_blank">
+        <div id="quick-reports" class="quick-reports">
+            <div class="icons-bar">
+                <ul class="styled-select-list">
+                </ul>
+                <div class="settings-icon-wrapper">
+                    <div class="settings-icon">
+                        <input type="image" src="img/icons/settings.png" alt="configure settings" />
+                    </div>
+                </div>
+                <a href="" class="expand-icon" target="_blank">
                     <img src="img/icons/expand.png" alt="open in new window">
                 </a>
-                <a href="" class="settings-icon" target="_blank">
-                    <img src="img/icons/settings.png" alt="open in new window">
-                </a>
             </div>
 
-            <div class="">
-
+            <div class="settings">
+                <form onsubmit="event.preventDefault()">
+                    <ul>
+                        <li>
+                            <label>Report 01</label>
+                            <div>
+                                <label for="name1">Name</label>
+                                <input class="name" type="text" id="name1">
+                            </div>
+                            <div>
+                                <label for="url1">URL</label>
+                                <input class="url" type="url" id="url1">
+                            </div>
+                        </li>
+                        <li>
+                            <label>Report 02</label>
+                            <div>
+                                <label for="name2">Name</label>
+                                <input class="name" type="text" id="name2">
+                            </div>
+                            <div>
+                                <label for="url2">URL</label>
+                                <input class="url" type="url" id="url2">
+                            </div>
+                        </li>
+                        <li>
+                            <label>Report 03</label>
+                            <div>
+                                <label for="name3">Name</label>
+                                <input class="name" type="text" id="name3">
+                            </div>
+                            <div>
+                                <label for="url3">URL</label>
+                                <input class="url" type="url" id="url3">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="form-buttons">
+                        <input type="button" class="cancel" value="Cancel">
+                        <input type="submit" class="save" value="Save">
+                    </div>
+                </form>
             </div>
+            <iframe  class="frame-window"></iframe>
         </div>
 
         <div id="my-folders">
@@ -90,7 +136,65 @@
             <iframe src="http://www.paulirish.com/" class="frame-window"></iframe>
         </div>
 
-        <div id="my-team-folders">
+        <div id="my-team-folders" class="my-team-folders">
+            <div class="icons-bar">
+                <ul class="styled-select-list">
+                </ul>
+                <div class="settings-icon-wrapper">
+                    <div class="settings-icon">
+                         <input type="image" src="img/icons/settings.png" alt="configure settings" />
+                    </div>
+                </div>
+                <a href="" class="expand-icon" target="_blank">
+                    <img src="img/icons/expand.png" alt="open in new window">
+                </a>
+            </div>
+
+            <div class="settings">
+                <form onsubmit="event.preventDefault()">
+                    <ul>
+                        <li>
+                            <label>Folder 01</label>
+                            <div>
+                                <label for="teamname1">Name</label>
+                                <input class="name" type="text" id="teamname1">
+                            </div>
+                            <div>
+                                <label for="teamurl1">URL</label>
+                                <input class="url" type="url" id="teamurl1">
+                            </div>
+                        </li>
+                        <li>
+                            <label>Folder 02</label>
+                            <div>
+                                <label for="teamname2">Name</label>
+                                <input class="name" type="text" id="teamname2">
+                            </div>
+                            <div>
+                                <label for="teamurl2">URL</label>
+                                <input class="url" type="url" id="teamurl2">
+                            </div>
+                        </li>
+                        <li>
+                            <label>Folder 03</label>
+                            <div>
+                                <label for="teamname3">Name</label>
+                                <input class="name" type="text" id="teamname3">
+                            </div>
+                            <div>
+                                <label for="teamurl3">URL</label>
+                                <input class="url" type="url" id="teamurl3">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="form-buttons">
+                        <input type="button" class="cancel" value="Cancel">
+                        <input type="submit" class="save" value="Save">
+                    </div>
+                </form>
+            </div>
+            <iframe  class="frame-window"></iframe>
         </div>
 
         <div id="public-folders">
