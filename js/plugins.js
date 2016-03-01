@@ -58,8 +58,7 @@ var UTILS = (function () {
 
 							// Handle JSON format
 							if (contentType === 'text/json' ||
-								contentType === 'application/json' ||
-								contentType === 'application/xml') {
+								contentType === 'application/json') {
 
 
 								// JSON throws an exception on invalid JSON
