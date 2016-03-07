@@ -12,6 +12,11 @@ header{
     background-color: black;
 }
 
+ .hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
 .layout-wrap{
     width: 80%;
     margin: 0 auto;
